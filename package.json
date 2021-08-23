@@ -1,6 +1,6 @@
 {
   "name": "jexl",
-  "version": "2.3.0",
+  "version": "1.0.0",
   "description": "Javascript Expression Language: Powerful context-based expression parser and evaluator",
   "main": "dist/Jexl.js",
   "files": [
@@ -32,9 +32,9 @@
   "author": "Tom Shawver <tom@frosteddesign.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/TomFrost/jexl/issues"
+    "url": "https://github.com/digifi-io/Jexl/issues"
   },
-  "homepage": "https://github.com/TomFrost/jexl",
+  "homepage": "https://github.com/digifi-io/Jexl",
   "eslintIgnore": [
     "node_modules",
     "coverage"
