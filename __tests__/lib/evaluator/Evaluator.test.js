@@ -190,26 +190,26 @@ describe('Evaluator', () => {
     const e = new Evaluator(grammar, context)
     await expect(e.eval(toTree(expr))).resolves.toBe(26)
   })
-  t('evaluator can access only to properties owned by context object', async () => {
-    const expr = '"".toLowerCase["__proto__"]';
-    const e = new Evaluator(grammar);
-    await expect(e.eval(toTree(expr))).rejects.toThrow(Error);
+  it('evaluator can access only to properties owned by context object', async () => {
+    const expr = '"".toLowerCase["__proto__"]'
+    const e = new Evaluator(grammar)
+    await expect(e.eval(toTree(expr))).rejects.toThrow(Error)
   })
   it('evaluator should not call any functions', async () => {
-    delete Object.prototype.valueOf;
-    String.prototype.test = () => 'called';
-    const expr = '"got " + { valueOf: "".test }';
-    const e = new Evaluator(grammar);
-    await expect(e.eval(toTree(expr))).resolves.toBe('got [object Object]');
-  });
+    delete Object.prototype.valueOf
+    String.prototype.test = () => 'called'
+    const expr = '"got " + { valueOf: "".test }'
+    const e = new Evaluator(grammar)
+    await expect(e.eval(toTree(expr))).resolves.toBe('got [object Object]')
+  })
   it('evaluator should not call any functions2', async () => {
     String.prototype.test = () => {
       throw new Error()
-    };
-    const expr = '{ then: "".test }';
-    const e = new Evaluator(grammar);
+    }
+    const expr = '{ then: "".test }'
+    const e = new Evaluator(grammar)
     await expect(e.eval(toTree(expr))).resolves.toStrictEqual({
       then: undefined
-    });
+    })
   })
 })

@@ -206,4 +206,9 @@ describe('Jexl', () => {
       await expect(inst.eval('!true')).rejects.toThrow(/invalid/i)
     })
   })
+  describe('getAvailableFunctionsNames', () => {
+    it('return all available function names', async () => {
+      await expect(inst.getAvailableFunctionsNames()).toEqual([])
+    })
+  })
 })
