@@ -19,7 +19,7 @@ const toTree = (exp) => {
 
 describe('Evaluator', () => {
   it('evaluates using an alternative Promise class', () => {
-    const e = new Evaluator(grammar, null, null, PromiseSync)
+    const e = new Evaluator(grammar, null, null, true, PromiseSync)
     expect(e.eval(toTree('2 + 2'))).toHaveProperty('value', 4)
   })
   it('evaluates an arithmetic expression', async () => {
