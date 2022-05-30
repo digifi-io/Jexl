@@ -1,8 +1,8 @@
 {
   "name": "@digifi/jexl",
-  "version": "1.0.6",
+  "version": "1.1.0",
   "description": "Javascript Expression Language: Powerful context-based expression parser and evaluator",
-  "main": "dist/Jexl.js",
+  "main": "dist/index.js",
   "files": [
     "dist"
   ],
