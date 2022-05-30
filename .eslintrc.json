@@ -10,7 +10,7 @@
   "rules": {
     "camelcase": 0,
     "no-console": 0,
-    "prettier/prettier": "error",
+    "prettier/prettier": "warn",
     "no-empty": ["error", { "allowEmptyCatch": true }],
     "no-unused-vars": [
       "error",
