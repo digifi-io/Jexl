@@ -1,6 +1,6 @@
 {
   "name": "@digifi/jexl",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "description": "Javascript Expression Language: Powerful context-based expression parser and evaluator",
   "main": "dist/index.js",
   "files": [
@@ -12,7 +12,7 @@
     "test": "npm run lint && NODE_PATH=./ RESOURCES_PATH=./lib jest --coverage --colors",
     "test:watch": "NODE_PATH=./ RESOURCES_PATH=./lib jest --watchAll --colors",
     "build": "babel lib -d dist",
-    "prepublishOnly": "npm test && npm run build"
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
